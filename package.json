@@ -1,0 +1,32 @@
+{
+  "name": "webcomunidad",
+  "version": "1.0.0",
+  "description": "Sitio Web Oficial de la Comunidad TI.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeho/webcomunidad.git"
+  },
+  "author": "webcomunidad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeho/webcomunidad/issues"
+  },
+  "homepage": "https://github.com/yeho/webcomunidad#readme",
+  "devDependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  },
+  "dependencies": {
+    "consolidate": "^0.16.0",
+    "nodemon": "^2.0.19",
+    "swig": "^1.4.2"
+  }
+}
