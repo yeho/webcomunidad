@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Comunidad IT</title>
+    <meta name="description" content="Encuentra la mejor comunidad de CS y tecnologia">
+    <meta name="keywords" content="developers, comunidad, it, desarollo, programacion">
+    <meta property="og:title" content="Comunidad IT | Landing Page" />
+    <meta property="og:description" content="Encuentra la mejor comunidad de CS y tecnologia" />
+     <link rel="stylesheet" href="/css/normalizer.css">
+
+    <link rel="stylesheet" href="/css/layout.css">
+{% block header %} {% endblock %}
+  
+
+</head>
+
+<body>
+   
+
+<header class="header">
+
+
+<nav class="nav">
+    <ul>
+        <li class="nav_element"><img src="/images/logo.jpeg" alt=""></li>
+        <li class="nav_element"><a href="/">inicio</a></li>
+        <li class="nav_element"> <a href="/blog">blog</a></li>
+        <li class="nav_element"> <a href="newsletter ">newsletter  </a></li>
+        <li class="nav_element"> <a href="/comunidad"> comunidad </a></li>
+        <li class="nav_element"> <a href="/contacto">contacto  </a></li>
+    </ul>
+
+
+</nav>
+</header>
+
+
+
+
+<main class="main">
+
+    {% block content %}{% endblock %}
+
+
+</main>
+
+
+
+<footer class="footer">
+
+<p>ITCScience 2022 &copy;</p>
+
+
+</footer>
+
+
+</body>
+
+</html>
