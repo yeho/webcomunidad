@@ -1,0 +1,58 @@
+/* underline page */
+.nav_element:nth-child(3) a {
+text-decoration: underline;
+
+
+
+}
+
+
+
+
+
+.post{
+
+    display: flex;
+    flex-direction: row;
+    /* max-width: 400px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: start;
+    }
+    
+    .post > img{
+    
+    width: 50%;
+    height: 100%;
+    border: 5px solid #3e3e3f;
+    border-radius: 10px;
+    }
+    
+    
+    .pst_body{
+        height: 100%;
+    }
+    
+    .pst_body > h3{
+    
+    margin: 0;
+    width: 180px;
+    
+    
+    
+    }
+    
+    
+    .pst_body > p{
+       
+        overflow: hidden;
+        width:180px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    
+
+
+    

@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+
+
+{% block header %}
+<link rel="stylesheet" href="/css/blog.css">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+{% for post in posts %}
+
+    <article class="post">
+  
+        <img src="{{post.image}}" alt="imagen post">
+         <div class="pst_body">
+    
+    
+         
+        <h3>{{post.title}}</h3>
+          <p>{{post.description}}</p>
+      </div>
+    
+    
+        </article>
+    
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+     
+                {% endblock %}
