@@ -10,6 +10,12 @@ body{
 }
 
 
+html{
+
+
+
+    min-height: 100%;
+    position: relative;}
 
 
 /* header */
@@ -27,9 +33,7 @@ body{
 
 
 
-
 .nav ul{
-
 
 list-style: none;
 margin: 0;
@@ -38,6 +42,7 @@ display: flex;
 flex-direction: row;
 width: 100%;
 align-items: center;
+position: relative;
 }
 
 
@@ -53,12 +58,68 @@ align-items: center;
     text-decoration: none;
     }
 
-.nav_element img{
+.logo img{
 
 width: 150px;
 height: 50px;
 object-fit: contain;
 }
+
+
+
+.nav_menu{
+    display: none;
+}
+
+
+
+
+@media screen and  (max-width: 768px){
+    
+    .nav .nav_element.active{
+        display: block;
+    }
+
+
+.nav  .nav_element{
+    display: none;
+
+}
+
+
+
+.nav ul{
+
+    flex-direction: column;
+    gap: 20px;
+    align-items:flex-start;
+
+}
+
+
+.nav ul li{
+    padding: 5px;
+
+}
+
+
+.nav_menu{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+
+
+
+
+
+}
+
+
+
+
+
 
 
 
@@ -77,9 +138,12 @@ object-fit: contain;
 
     display: grid;
     place-content: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(360px,1fr));
     gap: 20px;
     grid-template-rows:auto;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
 }
 
 
