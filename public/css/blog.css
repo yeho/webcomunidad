@@ -1,58 +1,92 @@
 /* underline page */
-.nav_element:nth-child(4) a {
-text-decoration: underline;
-
-
-
+.nav_element:nth-child(2) a {
+  text-decoration: underline;
+  color: #02e4e7;
+}
+.article-container {
+  /*
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-rows: auto;*/
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: white;
 }
 
 
 
 
+.post {
+  max-width: 800px;
 
-.post{
+  display: flex;
 
-    display: flex;
-    flex-direction: row;
-    /* max-width: 400px; */
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    text-align: start;
-    }
-    
-    .post > img{
-    
-    width: 50%;
-    height: 100%;
-    border: 5px solid #3e3e3f;
-    border-radius: 10px;
-    }
-    
-    
-    .pst_body{
-        height: 100%;
-    }
-    
-    .pst_body > h3{
-    
-    margin: 0;
-    width: 180px;
-    
-    
-    
-    }
-    
-    
-    .pst_body > p{
-       
-        overflow: hidden;
-        width:180px;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-    }
-    
+  margin: 7px;
+  border-radius: 5px;
+ 
+}
+
+.post img {
+  width: 30%;
+  height: 70%;
+  border-radius: 5px 0 0 5px;
+}
 
 
-    
+
+.pst_body a > h2 {
+  margin: 5px;
+  width: 95%;
+  font-size: 28px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.pst_body a > h2:hover {
+  color: rgb(92, 92, 92);
+}
+
+.pst_body > h3 {
+  font-size: 17px;
+  color: black;
+  margin: 5px; 
+  
+  overflow: hidden;
+  width: 95%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+}
+.pst_footer {
+  display: flex;
+  min-width: 200px;
+  margin-left: 10px;
+  display: -webkit-box;
+  overflow: auto;
+ 
+  
+}
+.pst_footer::-webkit-scrollbar {
+  background: none;    
+}
+/*
+.pst_footer::-webkit-scrollbar-thumb {
+  background-color: rgb(35, 173, 35);  
+  border-radius: 20px;      
+  box-shadow: 0 0 1px green;
+}
+*/
+
+.pst_footer p:nth-child(1) {
+  color: rgb(35, 173, 35);
+}
+.pst_footer p:nth-child(2) {
+  color: rgba(0, 0, 0, 0.548);
+}
+/*  "14.10.2022 18:05 h" */

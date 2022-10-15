@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block header %}
+
+<link rel="stylesheet" href="/css/community.css" />
+
+{% endblock %}
+{% block content %}
+
+<section class="container">
+    <h1>Únete a nuestra comunidad</h1>
+    <div class="card">
+        {% for link in groups %}
+        <a class="card-body" href="{{link.link}}" _target="blank">
+            <img src="{{link.image}}" alt="" />
+            <p class="card-title">{{link.name}}</p>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

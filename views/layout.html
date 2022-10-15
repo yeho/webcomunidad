@@ -1,65 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Comunidad IT</title>
-    <meta name="description" content="Encuentra la mejor comunidad de CS y tecnologia">
-    <meta name="keywords" content="developers, comunidad, it, desarollo, programacion">
+    <meta
+      name="description"
+      content="Encuentra la mejor comunidad de CS y tecnologia"
+    />
+    <meta
+      name="keywords"
+      content="developers, comunidad, it, desarollo, programacion"
+    />
     <meta property="og:title" content="Comunidad IT | Landing Page" />
-    <meta property="og:description" content="Encuentra la mejor comunidad de CS y tecnologia" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/normalizer.css">
+    <meta
+      property="og:description"
+      content="Encuentra la mejor comunidad de CS y tecnologia"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalizer.css" />
 
-    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/layout.css" />
 
-{% block header %} {% endblock %}
-  
+    {% block header %} {% endblock %}
+  </head>
 
-</head>
-
-<body>
-   
-
-<header class="header">
-
-
-<nav class="nav">
-    <ul>
-        <li class="logo"><img src="/images/logo.jpeg" alt=""></li>
-        <li  id="menu" class="nav_menu"><img src="/images/icons8-menu.svg"  alt=""></li>
-        <li class="nav_element"><a href="/">inicio</a></li>
-        <li class="nav_element"> <a href="/blog">blog</a></li>
-        <li class="nav_element"> <a href="newsletter ">newsletter  </a></li>
-        <li class="nav_element"> <a href="/comunidad"> comunidad </a></li>
-        <li class="nav_element"> <a href="/contacto">contacto  </a></li>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo"><img src="/images/logo.jpeg" alt="" /></div>
+        <ul class="nav-menu-complete">
+          <li class="nav_element"><a href="/">inicio</a></li>
+          <li class="nav_element"><a href="/blog">blog</a></li>
+          <li class="nav_element"><a href="/">newsletter </a></li>
+          <li class="nav_element"><a href="/community">comunidad</a></li>
+          <li class="nav_element"><a href="/">contacto </a></li>
+        </ul>
         
-    </ul>
+        <div class="btn not-active" id="btn-ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
 
+    <main class="main">{% block content %}{% endblock %}</main>
 
-</nav>
-</header>
+    <footer class="footer">
+      <p>ITCScience 2022 &copy;</p>
+    </footer>
 
-
-
-
-<main class="main">
-
-    {% block content %}{% endblock %}
-
-
-</main>
-
-
-
-<footer class="footer">
-
-<p>ITCScience 2022 &copy;</p>
-
-
-</footer>
-
-<script src="/js/layout.js"></script>
-
-</body>
-
+    <script src="/js/layout.js"></script>
+  </body>
 </html>

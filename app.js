@@ -7,6 +7,7 @@ var cons = require('consolidate');
 
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
+var communityRouter = require('./routes/community');
 var app = express();
 
 // view engine setup
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/blog', blogRouter);
+app.use('/community', communityRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

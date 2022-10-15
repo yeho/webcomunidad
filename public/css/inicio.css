@@ -1,29 +1,20 @@
 /* underline page */
 
-.nav_element:nth-child(3)  a {
-    text-decoration: underline;
-    
-    
-    
-    }
-    
+.nav_element:nth-child(1) a {
+  text-decoration: underline;
+  color: #02e4e7;
+}
 
+div {
+  width: 100vw;
+  text-align: center;
+ 
+}
 
-    div{
+div h1 {
+  font-size: 30px;
+  color: white;
+  background-color: brown;
 
+}
 
-  
-        width: 100vw;
-        text-align: center;
-
-
-    }
-
-
-    div h1{
-
-        font-size: 42px;
-        color: white;
-        background-color: brown;
-
-    }
