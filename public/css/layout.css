@@ -12,7 +12,10 @@ html {
   min-height: 100%;
   position: relative;
 }
-
+@font-face {
+  font-family: montse;
+  src: url("../fonts/Montserrat-Regular.otf");
+}
 /* header */
 
 .header {
@@ -34,7 +37,7 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: montse;
   align-items: center;
 }
 

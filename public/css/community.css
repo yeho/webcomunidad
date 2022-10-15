@@ -1,0 +1,44 @@
+@font-face {
+    font-family: montse;
+    src: url("../fonts/Montserrat-Regular.otf");
+}
+
+.nav_element:nth-child(4) a {
+  text-decoration: underline;
+  color: #02e4e7;
+}
+.container {
+  font-family: montse;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+ 
+  
+  
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-body {
+    text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(90deg, #00a884 0%, #00a884 35%, #52cb5f 100%);
+}
+.card-body:hover {
+  box-shadow: 0 0 10px #00a884;
+}
+.card-body img {
+  border-radius: 100%;
+  box-shadow: 0 0 2px rgb(7, 7, 7);
+  width: 50px;
+  height: 50px;
+  margin: 7px;
+}
