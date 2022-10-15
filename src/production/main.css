@@ -1,0 +1,90 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  width: 95%;
+  margin: 0 auto;
+}
+header img {
+  width: 150px;
+}
+header nav ul {
+  background-color: rgba(19, 71, 71, 0);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(0, 0, 255, 0);
+}
+header nav ul a {
+  margin: 0;
+  font-weight: 100;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+header nav ul a:hover {
+  color: orange;
+}
+.information {
+  background-color: rgba(0, 255, 255, 0);
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.information article {
+  margin: 5px;
+  width: 45%;
+  border-radius: 10px;
+  min-height: 240px;
+  background-color: rgba(255, 166, 0, 0);
+  display: flex;
+}
+.information .article-img {
+  background-color: rgba(102, 51, 153, 0);
+  width: 40%;
+}
+.information .article-content {
+  background-color: rgba(70, 70, 70, 0.884);
+  width: 60%;
+  padding: 15px;
+  border-radius: 0 10px 10px 0;
+}
+.information .article-content a {
+  text-decoration: none;
+  color: gray;
+}
+.information .article-content:hover > a {
+  text-decoration: underline;
+}
+.information .article-img img {
+  width: 500px;
+  border-radius: 10px 0 0 10px;
+}
+
+footer {
+  text-align: center;
+  margin: 0;
+  background-color: black;
+  width: 100%;
+}
+footer p {
+  padding: 5px;
+}
