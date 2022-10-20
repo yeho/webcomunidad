@@ -11,6 +11,7 @@ body {
 html {
   min-height: 100%;
   position: relative;
+  scroll-behavior: smooth;
 }
 @font-face {
   font-family: montse;
@@ -24,6 +25,8 @@ html {
   position: sticky;
   top: 0;
   box-shadow: 0 0 5px black;
+  z-index: 1;
+  height: 10vh;
 }
 .nav {
   max-width: 1200px;
@@ -82,7 +85,7 @@ html {
   width: 40px;
   cursor: pointer;
 }
-span {
+.span {
   display: block;
   width: 100%;
   padding: 1px;
@@ -116,6 +119,9 @@ span + span {
 .not-active span:nth-child(3) {
   animation: ease 0.7s bottom-2 forwards;
 }
+
+
+
 /* aimation button */
 @keyframes top {
   0% {
@@ -232,7 +238,7 @@ span + span {
     top: 10px;
     right: 40px;
   }
-}
+} 
 
 /* end header */
 
