@@ -6,6 +6,7 @@
 body {
   background-color: #1d1d1d;
   margin: 0;
+  font-family: montse;
 }
 
 html {
@@ -13,10 +14,12 @@ html {
   position: relative;
   scroll-behavior: smooth;
 }
+
 @font-face {
   font-family: montse;
   src: url("../fonts/Montserrat-Regular.otf");
 }
+
 /* header */
 
 .header {
@@ -25,14 +28,16 @@ html {
   position: sticky;
   top: 0;
   box-shadow: 0 0 5px black;
-  z-index: 1;
+  z-index: 30;
   height: 10vh;
 }
+
 .nav {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .nav ul {
@@ -40,14 +45,17 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 2rem;
   font-family: montse;
   align-items: center;
+  padding-right: 1.5rem;
 }
 
 .nav_element {
-  margin: 0 10px 0 10px;
-  font-size: 20px;
+  /* margin: 0 10px 0 10px; */
+  font-size: .9rem;
 }
+
 .nav_element a {
   text-decoration: none;
 }
@@ -63,6 +71,7 @@ html {
   transition: transform 0.3s ease;
   background-color: white;
 }
+
 .nav_element a:hover::before {
   transform: scaleX(1);
 }
@@ -71,20 +80,24 @@ html {
   align-items: center;
   display: flex;
 }
+
 .logo img {
-  width: 150px;
-  height: 50px;
+  width: 12.5rem;
+  height: 3.75rem;
   object-fit: cover;
 }
-.nav-menu-mobile{
-    display: none;
+
+.nav-menu-mobile {
+  display: none;
 }
+
 /* mobile */
 .btn {
   display: none;
   width: 40px;
   cursor: pointer;
 }
+
 .span {
   display: block;
   width: 100%;
@@ -96,26 +109,33 @@ html {
   transition: all 0.3s;
   position: relative;
 }
-span + span {
+
+span+span {
   margin-top: 5px;
 }
+
 .active span:nth-child(1) {
   animation: ease 0.7s top forwards;
 }
+
 .not-active span:nth-child(1) {
   animation: ease 0.7s top-2 forwards;
 }
+
 .active span:nth-child(2) {
   animation: ease 0.7s scaled forwards;
 }
+
 .not-active span:nth-child(2) {
   animation: ease 0.7s scaled-2 forwards;
   background-color: #fff;
 }
+
 .active span:nth-child(3) {
   animation: ease 0.7s bottom forwards;
   background-color: #fff;
 }
+
 .not-active span:nth-child(3) {
   animation: ease 0.7s bottom-2 forwards;
 }
@@ -128,72 +148,88 @@ span + span {
     top: 0;
     transform: rotate(0);
   }
+
   50% {
     top: 10px;
     transform: rotate(0);
   }
+
   100% {
     top: 10px;
     transform: rotate(45deg);
   }
 }
+
 @keyframes top-2 {
   0% {
     top: 12px;
     transform: rotate(45deg);
   }
+
   50% {
     top: 12px;
     transform: rotate(0);
   }
+
   100% {
     top: 0px;
     transform: rotate(0);
   }
 }
+
 @keyframes bottom {
   0% {
     bottom: 0;
     transform: rotate(0);
   }
+
   50% {
     bottom: 12px;
     transform: rotate(0);
   }
+
   100% {
     bottom: 12px;
     transform: rotate(135deg);
   }
 }
+
 @keyframes bottom-2 {
   0% {
     bottom: 12px;
     transform: rotate(135deg);
   }
+
   50% {
     bottom: 12px;
     transform: rotate(0);
   }
+
   100% {
     bottom: 0;
     transform: rotate(0);
   }
 }
+
 @keyframes scaled {
   50% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(0);
   }
 }
+
 @keyframes scaled-2 {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
@@ -202,18 +238,19 @@ span + span {
 @media screen and (max-width: 768px) {
   .nav .nav_element.mobile-active {
     display: block;
-    
+
     position: relative;
-    
+
   }
-  .nav .nav-menu-complete{
-    
+
+  .nav .nav-menu-complete {
+
     position: absolute;
     top: 50px;
     right: 0;
   }
-   
-  
+
+
 
   .nav .nav_element {
     display: none;
@@ -229,7 +266,7 @@ span + span {
 
   .nav ul li {
     padding: 10px;
-   
+
   }
 
   .btn {
@@ -238,7 +275,7 @@ span + span {
     top: 10px;
     right: 40px;
   }
-} 
+}
 
 /* end header */
 
@@ -257,10 +294,10 @@ span + span {
   position: absolute;
   width: 100%;
   bottom: 0;
-  
+
 }
 
-.footer > p {
+.footer>p {
   margin: 0;
   text-align: center;
   padding: 4px;
