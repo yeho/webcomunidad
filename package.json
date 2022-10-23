@@ -26,6 +26,9 @@
   },
   "dependencies": {
     "consolidate": "^0.16.0",
+    "highlight.js": "^11.6.0",
+    "mariadb": "^3.0.1",
+    "markdown-it": "^13.0.1",
     "nodemon": "^2.0.19",
     "swig": "^1.4.2"
   }

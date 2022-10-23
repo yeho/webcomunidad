@@ -68,3 +68,17 @@ a {
 
 }
 
+
+
+.no-content{
+text-align: center;
+display: grid;
+place-content: center;
+height: 90vh;
+font-size: 24px;
+
+
+
+
+
+}
