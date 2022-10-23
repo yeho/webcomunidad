@@ -8,6 +8,10 @@ var cons = require('consolidate');
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
 var communityRouter = require('./routes/community');
+const fs = require('fs');
+let MarkdownIt = require('markdown-it')
+md = new MarkdownIt()
+
 var app = express();
 
 // view engine setup
@@ -23,6 +27,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/blog', blogRouter);
+app.use('/blog/:idPost',(req,res)=>{
+
+// const data = path.join(__dirname, 'posts',`${req.params.idPost}.md`)
+
+fs.readFile(path.join(__dirname, 'posts',`${req.params.idPost}.md`),(err,data)=>{
+
+// console.log(data.toString())
+
+  const dataHTML =  md.render(data.toString(),)
+    res.render("post",{text:dataHTML})
+//  res.send("hola")
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+});
 app.use('/community', communityRouter);
 
 // catch 404 and forward to error handler

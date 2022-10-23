@@ -1,0 +1,24 @@
+{% extends 'layout.html' %} 
+{%block header %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css">
+<link rel="stylesheet" href="/css/article.css">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="article">
+
+{%autoescape%} {{ text }} {%endautoescape%}
+
+</div>
+
+<script type="module">
+    // console.log("xd")
+import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/es/highlight.min.js';
+hljs.highlightAll()
+</script>
+
+{% endblock %}
