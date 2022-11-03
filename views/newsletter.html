@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+<link rel="stylesheet" href="/css/floating-labels.css">
+
+{% endblock %}
+
+
+{% block content %}
+   
+  <form class="form-signin" method="POST">
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal hero-text">Suscribete al Newsletter!</h1>
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" name="fName" id="inputName" class="form-control" placeholder="Escribe aqui tu nombre" inputNamerequired autofocus>
+    <label for="inputName">Nombre</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="email" name="Email" id="inputEmail" class="form-control" placeholder="escribe tu email"  required>
+    <label for="inputEmail">Email</label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Quiero suscribirme!</button>
+  <p class="mt-5 mb-3 text-muted text-center">Hecho con &hearts;</p>
+</form>
+
+{% endblock %}

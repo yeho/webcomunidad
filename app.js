@@ -8,6 +8,7 @@ var cons = require('consolidate');
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
 var communityRouter = require('./routes/community');
+var newsRouter = require('./routes/newsletter');
 const fs = require('fs');
 let MarkdownIt = require('markdown-it')
 md = new MarkdownIt()
@@ -54,6 +55,7 @@ fs.readFile(path.join(__dirname, 'posts',`${req.params.idPost}.md`),(err,data)=>
 
 });
 app.use('/community', communityRouter);
+app.use('/newsletter', newsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
