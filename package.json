@@ -22,7 +22,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "standard": "^17.0.0"
   },
   "dependencies": {
     "consolidate": "^0.16.0",
@@ -31,5 +32,8 @@
     "markdown-it": "^13.0.1",
     "nodemon": "^2.0.19",
     "swig": "^1.4.2"
+  },
+  "eslintConfig": {
+    "extends":["standard"]
   }
 }

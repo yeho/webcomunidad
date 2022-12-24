@@ -292,6 +292,7 @@ span+span {
 .footer {
   background-color: #101010;
   position: absolute;
+  bottom: 0;
   padding: .5rem 0;
   width: 100%;
 }
