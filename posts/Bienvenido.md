@@ -70,7 +70,7 @@ grupo de ayuda para realizar tareas en la áreas de la informática
 - No contenido NSFW ❌
 - No compartir el enlace ❌
 - No mensajes sin sentido ni cadenas ❌
-- No mandar nudes (a menos que seas mujer) ❌
+- No mandar nudes❌
 - Solo se habla lo que en otros grupos no se pueda hablar, las demás cosas en sus respectivos grupos.
 
 **En el grupo de Recursos Informática**
