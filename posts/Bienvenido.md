@@ -1,7 +1,7 @@
 ---
 id:Bienvenido
 title:Bienvenido a la web de itscience
-image:/images/logo.jpeg
+image:/images/logo.webp
 description:bienvenida a la web
 ---
 
