@@ -1,17 +1,17 @@
-const express = require('express')
-const fs = require('fs/promises')
-const path = require('path')
-const MarkdownIt = require('markdown-it')
+import { Router } from 'express'
+import { readdir, readFile } from 'fs/promises'
+import { join } from 'path'
+import MarkdownIt from 'markdown-it'
 const md = new MarkdownIt({ html: true })
 
-const router = express.Router()
+const router = Router()
 
 router.get('/', async function (req, res, next) {
-  fs.readdir(path.join('posts')).then(async (files) => {
+  readdir(join('posts')).then(async (files) => {
     const data = []
 
     for await (const file of files) {
-      const text = await fs.readFile(path.join('posts', file), 'utf-8')
+      const text = await readFile(join('posts', file), 'utf-8')
       const header = Extra(text)
       data.push(header)
     }
@@ -28,7 +28,7 @@ router.get('/', async function (req, res, next) {
 )
 
 router.get('/:idPost', function (req, res) {
-  fs.readFile(path.join('posts', `${req.params.idPost}.md`)).then((data) => {
+  readFile(join('posts', `${req.params.idPost}.md`)).then((data) => {
     try {
       const dataHTML = md.render((data.toString().replace(/-{3}([\w\s:"',{}/.-])*-{3}/gm, '')))
       res.render('post', { text: dataHTML })
@@ -42,7 +42,7 @@ router.get('/:idPost', function (req, res) {
   })
 })
 
-module.exports = router
+export default router
 
 function Extra (fileText) {
   const headers = /(?<=-{3})([\w\s:"',{}/.-])*(?=-{3})/gm

@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express.Router()
+import { Router } from 'express'
+const router = Router()
 
 /* serve community links */
 const groups = [
@@ -40,4 +40,4 @@ router.get('/', function (req, res, next) {
   res.render('community', { groups })
 })
 
-module.exports = router
+export default router
