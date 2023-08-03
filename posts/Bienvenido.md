@@ -1,12 +1,12 @@
 ---
 id:Bienvenido
-title:Bienvenido a la web de itscience
+title:Bienvenido a la web de ITCScience
 image:/images/logo.webp
 description:bienvenida a la web
 ---
 
 
-# Bienvenido a la web de itscience
+# Bienvenido a la web de ITCScience
 ![logo itscience](/images/logo1b.svg)
 
 
