@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Sitio Web Oficial de la Comunidad TI.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "standard": "^17.0.0"
+    "standard": "^17.1.0"
   },
   "dependencies": {
     "consolidate": "^0.16.0",
@@ -34,6 +35,6 @@
     "swig": "^1.4.2"
   },
   "eslintConfig": {
-    "extends":["standard"]
+    "extends": "standard"
   }
 }

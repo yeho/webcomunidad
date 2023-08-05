@@ -1,26 +1,28 @@
-const createError = require('http-errors')
-const express = require('express')
-const path = require('path')
-const cookieParser = require('cookie-parser')
-const logger = require('morgan')
-const cons = require('consolidate')
+import createError from 'http-errors'
+import express, { json, urlencoded } from 'express'
+import { join } from 'path'
+import cookieParser from 'cookie-parser'
+import logger from 'morgan'
+import { swig } from 'consolidate'
 
-const indexRouter = require('./routes/index')
-const blogRouter = require('./routes/blog')
-const communityRouter = require('./routes/community')
+// imports the routers
+import indexRouter from './routes/index.js'
+import blogRouter from './routes/blog.js'
+import communityRouter from './routes/community.js'
 
 const app = express()
 
 // view engine setup
-app.engine('html', cons.swig)
-app.set('views', path.join(__dirname, 'views'))
+app.engine('html', swig)
+app.set('views', join(process.cwd(), 'views'))
 app.set('view engine', 'html')
 app.use(logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(json())
+app.use(urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(join(process.cwd(), 'public')))
 
+// routes
 app.use('/', indexRouter)
 app.use('/blog', blogRouter)
 app.use('/community', communityRouter)
@@ -41,6 +43,4 @@ app.use(function (err, req, res, next) {
   res.render('error')
 })
 
-// YEHO test Deploy
-
-module.exports = app
+export default app
