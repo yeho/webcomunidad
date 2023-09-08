@@ -27,12 +27,15 @@
     "standard": "^17.1.0"
   },
   "dependencies": {
-    "consolidate": "^0.16.0",
-    "highlight.js": "^11.6.0",
-    "mariadb": "^3.0.1",
-    "markdown-it": "^13.0.1",
-    "nodemon": "^2.0.19",
-    "swig": "^1.4.2"
+    "consolidate": "0.16.0",
+    "highlight.js": "11.6.0",
+    "mariadb": "3.0.1",
+    "markdown-it": "13.0.1",
+    "multer": "1.4.5-lts.1",
+    "mysql2": "3.6.0",
+    "nodemailer": "6.9.4",
+    "nodemon": "2.0.19",
+    "swig": "1.4.2"
   },
   "eslintConfig": {
     "extends": "standard"
