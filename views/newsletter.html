@@ -1,0 +1,89 @@
+{% extends 'layout.html' %} 
+
+{% block header %}
+
+
+<title>itcscience | Newsletter</title>
+
+
+  <meta name="description" content="Newsletter sobre ciencia y tecnoliga" />
+  <meta name="keywords" content="developers, comunidad, it, desarollo, programacion,desarrollo web,diseño de aplicaciones,tecnología" />
+
+  <meta property="og:title" content="Newsletter" />
+  <meta property="og:description" content="Newsletter ciecia y tecnologia" /> 
+<link rel="stylesheet" href="/css/newsletter.css">
+{% endblock %}
+
+{% block content %}
+
+<section class="container">
+
+<div><p class="subtitle">No te pierdas <span class="color--blue">ningun conocimiento</span> </p>
+
+  
+
+
+</div>
+
+<form class="card">
+
+<p>Suscribete a nuestro newsletter</p>
+
+<div class="input-effect">
+    <input required  class="effect" type="text" name="name" aria-label="name">
+    <label >Nombre</label>
+    <span></span>
+
+</div>
+
+<p class="none">email ya registrado</p>
+<div class="input-effect">
+    <input  required class="effect" type="email" name="email" aria-label="email">
+    <label>Email</label>
+    <span></span>
+
+</div>
+
+<button>Suscribirse</button>
+<p class="sucess-none">suscrito correctamente</p>
+
+</form>
+
+</section>
+
+
+
+<section class="sec-2">
+
+
+
+<h1>Newsletters</h1>
+<span class="sec-subtitle">publicados:{{files.length}}</span>
+
+<div class="Newsletters">
+
+   <ul class="newsletter-list">
+    {% for newsletter in files %}
+    <li><span>{{newsletter.create_at.toString()}}</span> <a href="/newsletter/{{newsletter.name}}" download> <img src="/newsletter/{{newsletter.name}}-image.png"></a>    </li>
+    {%endfor%}
+   
+</ul>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<script src="/js/newsletter.js"></script>
+
+{% endblock %}
