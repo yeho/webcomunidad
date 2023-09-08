@@ -9,7 +9,8 @@ import { swig } from 'consolidate'
 import indexRouter from './routes/index.js'
 import blogRouter from './routes/blog.js'
 import communityRouter from './routes/community.js'
-
+import ContactRouter from './routes/contact.js'
+import NewletterRouter from './routes/newsletter.js'
 const app = express()
 
 // view engine setup
@@ -26,6 +27,8 @@ app.use(express.static(join(process.cwd(), 'public')))
 app.use('/', indexRouter)
 app.use('/blog', blogRouter)
 app.use('/community', communityRouter)
+app.use('/contacto', ContactRouter)
+app.use('/newsletter', NewletterRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -1,0 +1,410 @@
+.card{
+
+background-color: whitesmoke;
+display: flex;
+flex-direction: column;
+gap: 25px;
+padding: 52px;
+border-radius: 5px;
+z-index: 5;
+}
+
+.card input{
+
+padding: 8px;
+color:black;
+background-color: transparent;
+border: none;
+border-bottom: 1px solid gray;
+}
+
+
+.container{
+width: 100%;
+height: calc(100vh - 120px);
+/* height: 100vh; */
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+gap: 40px;
+
+background-color: hsl(218, 41%, 15%);
+background-image: radial-gradient(650px circle at 0% 0%,
+    hsl(218, 41%, 35%) 15%,
+    hsl(218, 41%, 30%) 35%,
+    hsl(218, 41%, 20%) 75%,
+    hsl(218, 41%, 19%) 80%,
+    transparent 100%),
+  radial-gradient(1250px circle at 100% 100%,
+    hsl(218, 41%, 45%) 15%,
+    hsl(218, 41%, 30%) 35%,
+    hsl(218, 41%, 20%) 75%,
+    hsl(218, 41%, 19%) 80%,
+    transparent 100%);
+
+}
+
+
+
+
+.subtitle{
+font-size: 72px;
+font-weight: bold;
+
+
+}
+
+.color--blue{
+display: block;
+color: rgb(55, 120, 173);
+
+}
+
+.card  p{
+width: 320px;
+color: rgb(49, 48, 48);
+font-size: 28px;
+font-weight: bold;
+text-align: center;
+}
+
+.card  button{
+
+padding: 10px;
+background-color: rgb(55, 120, 173);
+border: none;
+border-radius: 4px;
+transition: 0.3s;
+}
+
+
+
+.card  button:hover{
+
+    background-color: rgb(69, 149, 213);
+    cursor: pointer;
+
+
+    }
+
+
+
+
+
+
+
+.input-effect > .effect{
+    z-index: 15;
+    padding: 10px;
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid gray;
+    width: 100%;
+    }
+    
+    .effect ~ span{
+        position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            width: 0; 
+            height: 2px; 
+            background-color: rgb(23, 128, 170);
+             transition: 0.4s;
+            
+            }
+    
+    .effect:focus ~ span{
+                position: absolute; 
+                    bottom: 0; 
+                    left: 0; 
+                    width: 100%; 
+                    height: 2px; 
+                    background-color: rgb(23, 128, 170);
+                     transition: 0.4s;
+                    
+                    }
+    
+    
+    
+    
+    
+    .effect:focus{
+    outline: none;
+    
+    }
+    
+    
+    .input-effect{
+    position: relative;
+    }
+    .input-effect > label{
+        z-index: -1;
+    color:rgb(82, 81, 81);
+    position: absolute;
+    top:15px;
+    transition: 0.3s;
+    left: 0;
+    }
+    
+    
+    .effect:focus ~ label{
+    transition: 0.3s;
+    top: -15px;
+    font-size: 13px;
+    color: rgb(23, 128, 170);
+    }
+    
+    .hasContent.effect ~ label{
+    
+    top: -15px;
+    font-size: 13px;
+    color: rgb(23, 128, 170);
+    
+    
+    
+    
+    }
+
+
+@media (max-width: 720px) {
+    
+.container{
+flex-direction: column;
+justify-content: flex-start;
+height:calc(100vh-200px);
+gap: 5px;
+}
+
+
+.subtitle{
+font-size: 32px;
+
+
+}
+
+
+.card{
+max-width:min-content;
+gap: 21px;
+padding:40px;
+}
+
+.card p {
+width: max-content;
+font-size: 16px;
+
+}
+
+}
+
+
+.none{
+display: none;
+}
+
+.email-erro > .none{
+display: block;
+color: red;
+font-size: 16px;
+}
+
+.sucess-none{
+display: none;
+
+}
+
+.sucess-email > .sucess-none{
+
+display: block;
+color: rgb(73, 228, 42);
+font-size: 16px;
+}
+
+
+
+
+    .modal {
+        color: black;
+        z-index: 20;
+        position: absolute;
+        top: 30vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 0 auto;
+        left: 42%;
+        padding: 24px;
+        align-items: center;
+        border-radius: 8px;
+        gap: 20px;
+
+
+}
+
+.modal > p{
+font-size: 24px;
+
+}
+
+.modal > button{
+
+padding: 8px;
+border: none;
+background-color: rgb(54, 176, 237);
+border-radius: 4px;
+cursor: pointer;
+transition: 0.3s;
+
+}
+
+.modal > button:hover{
+
+
+    background-color: rgb(90, 186, 234);
+
+    
+    }
+
+.modal p{
+color: black;
+
+}
+
+.modal input{
+    color: black;
+}
+
+
+
+
+.modal.loading .loader{
+
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+width: 120px;
+height: 120px;
+animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0%{
+        transform:rotate(0deg)
+    }
+
+    100%{
+        transform:rotate(360deg) ;
+    }
+}
+
+.sucess .none{
+
+display: block;
+color: green;
+}
+
+.news-container{
+
+display: flex;
+gap: 5px;
+flex-wrap: wrap;
+max-width: 600px;
+
+}
+.news-span{
+font-size: 18px;
+font-weight: bold;
+}
+.news-container > a:hover{
+
+color: #3498db;
+}
+
+
+
+
+.sec-2{
+padding: 15px;
+margin-bottom: 50px;
+
+
+}
+
+
+
+.sec-2 h1{
+
+margin: 0 auto;
+width: max-content;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.sec-subtitle{
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+
+.newsletter-list li a img{
+width: 100%;
+max-width: 450px;
+transition: 0.3s;
+aspect-ratio: 9/16;
+}
+
+
+.newsletter-list{
+
+display: grid;
+place-content: center;
+justify-items: center;
+grid-template-columns: repeat(3,minmax(180px,400px));
+gap: 40px;
+margin: 0;
+padding:0;
+
+}
+
+.newsletter-list li{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+list-style: none;
+
+ & > span {
+
+    text-align: end;
+
+ }
+
+}
+
+.newsletter-list li a img:hover {
+
+transform: scale(1.05);
+box-shadow: 1px 1px 12px 8px black;
+
+}
+
+
+
+
+
+
+@media (max-width: 720px) {
+
+    .newsletter-list{
+
+        grid-template-columns: 1fr 1fr;
+
+
+    }
+
+
+
+}

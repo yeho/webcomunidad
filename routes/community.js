@@ -19,16 +19,6 @@ const groups = [
     image: '/images/pog.webp'
   },
   {
-    name: '🤖 Programadores 101 👾',
-    link: 'https://chat.whatsapp.com/IFFG3uUQNO2DfrKzUiOCBo',
-    image: '/images/101.webp'
-  },
-  {
-    name: '🐧 IT & SysAdmin 💻',
-    link: 'https://chat.whatsapp.com/Cn2s8jDntv9InrNlB8Ni93',
-    image: '/images/it.webp'
-  },
-  {
     name: '📚 Recursos Informatica 🤓',
     link: 'https://chat.whatsapp.com/ER1SMqM6GmZKGBIWD7JUEs',
     image: '/images/recur.webp'
