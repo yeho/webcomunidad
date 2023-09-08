@@ -30,8 +30,9 @@ router.get('/', async function (req, res, next) {
 router.get('/:idPost', function (req, res) {
   readFile(join('posts', `${req.params.idPost}.md`)).then((data) => {
     try {
+      const info = Extra(data.toString())
       const dataHTML = md.render((data.toString().replace(/-{3}([\w\s:"',{}/.-])*-{3}/gm, '')))
-      res.render('post', { text: dataHTML })
+      res.render('post', { text: dataHTML, title: info.title, description: info.description })
     } catch (err) {
       console.log(err)
       res.status(500).send()
