@@ -1,0 +1,63 @@
+{% extends 'layout.html' %} {% block header %}
+<title>itcscience | Contacto</title>
+
+
+  <meta name="description" content="Contacte con nosotros para cualquier consulta o solicitud. Estamos disponibles por correo electrónico, teléfono y formulario de contacto." />
+  <meta name="keywords" content="developers, comunidad, it, desarollo, programacion" />
+
+
+
+  <meta property="og:title" content="Contacto" />
+  <meta property="og:description" content="Contacte con nosotros para cualquier consulta o solicitud. Estamos disponibles por correo electrónico, teléfono y formulario de contacto." />
+<link rel="stylesheet" href="/css/contact.css" />
+
+{% endblock %}
+
+{% block content %}
+
+<section class="contact">
+
+    <h1 class="title">Contactanos</h1>
+<form class="contact-form" >
+
+
+    <div class="input-effect">
+        <input class="effect" required  type="text" aria-label="nombre" name="name" >
+        <label>Nombre</label>
+        <span></span>
+    </div>
+
+    <div class="input-effect">
+        <input class="effect" required  type="email" aria-label="Email" name="email" >
+        <label>Email</label>
+        <span></span>
+    </div>
+
+    <div class="input-effect">
+        <input class="effect" required  type="tel" aria-label="Telefono" name="phone" >
+        <label>Telefono</label>
+        <span></span>
+    </div>
+
+
+    <div class="input-effect">
+        <textarea class="effect"  required name="menssage" aria-label="tu mensaje"></textarea>
+        <label>tu mensaje</label>
+        <span></span>
+    </div>
+    <!-- <input type="" name="menssage" placeholder="tu mensaje">-->
+    <button class="btn-submit">enviar mensaje</button>
+
+</form>
+
+
+
+
+</section>
+
+
+<script src="/js/contact.js"></script>
+
+
+
+{% endblock %}
