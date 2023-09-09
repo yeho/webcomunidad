@@ -27,7 +27,7 @@ router.get('/', async function (req, res, next) {
 }
 )
 
-router.get('/:idPost', function (req, res) {
+router.get('/:idPost', function (req, res, next) {
   readFile(join('posts', `${req.params.idPost}.md`)).then((data) => {
     try {
       const info = Extra(data.toString())
@@ -39,7 +39,7 @@ router.get('/:idPost', function (req, res) {
     }
   }).catch((err) => {
     console.log(err)
-    res.status(404).send()
+    next(404)
   })
 })
 
