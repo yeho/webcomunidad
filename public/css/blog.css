@@ -30,6 +30,7 @@
   height: 100%;
   border-radius: 8px;
   border: 5px solid #3d393b;
+  view-transition-name: page;
 }
 
 a {
@@ -67,4 +68,11 @@ a {
   place-content: center;
   height: 90vh;
   font-size: 24px;
+}
+
+
+.post-title{
+
+  view-transition-name:title
+
 }

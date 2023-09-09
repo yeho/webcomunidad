@@ -10,6 +10,15 @@ padding-bottom:50px ;
 }
 
 
+h1{
+
+
+  view-transition-name:title;
+    
+    
+
+}
+
 .article img{
 
 width:100%;
@@ -17,7 +26,11 @@ max-height: 450px;
 margin: 0 auto;
 display: block;
 margin-bottom: 10px;
+view-transition-name: page;
 }
+
+
+
 
 
 
