@@ -1,5 +1,6 @@
+import { md5 } from './md5.js'
 document.addEventListener('DOMContentLoaded', () => {
-  const read = 'du210'
+  const read = '5d6db920ddb20ca0c26a4597b8b56c3e38f4ca6e3593c093b1425c116668eca3'
   const lista = []
 
   document.querySelector('.container').addEventListener('click', () => {
@@ -11,12 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   )
 
-  document.addEventListener('keypress', (evt) => {
+  document.addEventListener('keypress', async (evt) => {
     lista.push(evt.key)
-    console.log(evt.key)
-    console.log(lista)
     if (lista.length === 5) {
-      const com = lista.join('')
+      const com = await md5({ message: lista.join('') })
       if (com === read) {
         modalNewletterUp()
         lista.length = 0
@@ -51,16 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (res.status === 409) {
         form.classList.add('email-erro')
         // quitar error luego de unos segundos
-        // setTimeout(() => {
-        //   form.classList.remove('email-erro')
-        // }, 2000)
-        console.log('no')
+        setTimeout(() => {
+          form.classList.remove('email-erro')
+        }, 2000)
       } else if (res.status === 200) {
         form.classList.add('sucess-email')
-        console.log('yes')
-        // setTimeout(() => {
-        //   form.classList.remove('sucess')
-        // }, 2000)
+        setTimeout(() => {
+          form.classList.remove('sucess-email')
+        }, 2000)
       }
     }
 

@@ -1,0 +1,12 @@
+.container-error{
+
+
+display: grid;
+place-content: center;
+
+> img{
+width: 100%;
+
+
+}
+}

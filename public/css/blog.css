@@ -7,10 +7,10 @@
 .article-container {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: auto;
   justify-items: center;
-  gap: 20px;
+  gap: 25px;
   max-width: 1000vw;
   align-items: center;
   margin: 0 auto;
@@ -18,12 +18,14 @@
 }
 
 .post {
+  margin-top: 20px;
   max-width: 460px;
   align-items: center;
   display: flex;
   gap: 4px;
-  margin: 7px;
 }
+
+
 
 .post img {
   width: 50%;
@@ -36,13 +38,13 @@ a {
   text-decoration: none;
 }
 
-.pst_body a > h2 {
+.pst_body  h2 {
   margin: 5px;
   width: 95%;
-  font-size: 24px;
   color: white;
   cursor: pointer;
   text-decoration: none;
+  font-size: 24px;
 }
 
 .pst_body a > h2:hover {
@@ -68,3 +70,14 @@ a {
   height: 90vh;
   font-size: 24px;
 }
+
+
+
+
+@media (max-width:750px){
+  .post h2{
+    font-size: 16px;
+  
+  }
+  
+  }

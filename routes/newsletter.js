@@ -13,7 +13,8 @@ router.get('/', async (req, res) => {
     const files = result.map((x) => { return { ...x, create_at: `${x.create_at.getDate()}/${x.create_at.getMonth()}/${x.create_at.getFullYear()}` } })
     res.render('newsletter', { files })
   } catch (err) {
-    return res.status(500).end()
+    console.log(err)
+    return res.render('newsletter', { files: [] })
   }
 })
 

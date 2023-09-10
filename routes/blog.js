@@ -11,9 +11,19 @@ router.get('/', async function (req, res, next) {
     const data = []
 
     for await (const file of files) {
+      if (file === 'docs') continue
       const text = await readFile(join('posts', file), 'utf-8')
       const header = Extra(text)
       data.push(header)
+    }
+
+    if (process.env.NODE_ENV === 'development') {
+      const docsFile = await readdir(join('posts', 'docs'))
+      for await (const file of docsFile) {
+        const text = await readFile(join('posts', 'docs', file), 'utf-8')
+        const header = Extra(text)
+        data.push({ ...header, id: `docs/${header.id}` })
+      }
     }
 
     if (data.length === 0) {
@@ -27,19 +37,38 @@ router.get('/', async function (req, res, next) {
 }
 )
 
-router.get('/:idPost', function (req, res) {
+router.get('/:idPost', function (req, res, next) {
   readFile(join('posts', `${req.params.idPost}.md`)).then((data) => {
     try {
       const info = Extra(data.toString())
+      console.log(info.id)
       const dataHTML = md.render((data.toString().replace(/-{3}([\w\s:"',{}/.-])*-{3}/gm, '')))
-      res.render('post', { text: dataHTML, title: info.title, description: info.description })
+      res.render('post', { text: dataHTML, title: info.title, description: info.description, id: info.id })
     } catch (err) {
       console.log(err)
       res.status(500).send()
     }
   }).catch((err) => {
     console.log(err)
-    res.status(404).send()
+    next(404)
+  })
+})
+
+router.get('/docs/:id', function (req, res, next) {
+  readFile(join('posts', 'docs', `${req.params.id}.md`)).then((data) => {
+    if (process.env.NODE_ENV === 'production') throw new Error('pagina no encontrada en producion')
+
+    try {
+      const info = Extra(data.toString())
+      const dataHTML = md.render((data.toString().replace(/-{3}([\w\s:"',{}/.-])*-{3}/gm, '')))
+      res.render('post', { text: dataHTML, title: info.title, description: info.description, id: info.id })
+    } catch (err) {
+      console.log(err)
+      res.status(500).send()
+    }
+  }).catch((err) => {
+    console.log(err)
+    next(404)
   })
 })
 

@@ -18,8 +18,7 @@
 
 
 {% block content %}
-
-<div class="article">
+<div class="article" style="view-transition-name:full-embed">
 
 {%autoescape%} {{ text }} {%endautoescape%}
 
@@ -29,6 +28,9 @@
     // console.log("xd")
 import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/es/highlight.min.js';
 hljs.highlightAll()
+
+
+
 </script>
 
 {% endblock %}
