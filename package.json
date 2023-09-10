@@ -5,7 +5,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./bin/www.js"
+    "start": "NODE_ENV=production nodemon ./bin/www.js",
+    "dev": "NODE_ENV=development nodemon ./bin/www.js"
   },
   "repository": {
     "type": "git",
