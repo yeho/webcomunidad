@@ -2,7 +2,7 @@
 id:uso_de_apis_con_postman_y_curl
 title: "Navegando el Mundo de las APIs: Dominando Postman y cURL"
 image:/images/yehovaldespino.com_apis.png
-description:bienvenida a la web
+description:ejemplos de uso postman y cURL
 ---
 
 
