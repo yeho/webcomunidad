@@ -1,5 +1,5 @@
 # Web Comunidad
-Este es el repositorio oficial del sitio web de Comunidad IT.
+Este es el repositorio oficial del sitio web de Comunidad ITCScience.org.
 
 
 ## Como puedo contribuir?
