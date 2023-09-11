@@ -1,8 +1,8 @@
 ---
 id:uso_de_apis_con_postman_y_curl
 title: "Navegando el Mundo de las APIs: Dominando Postman y cURL"
-image:/images/logo.webp
-description:bienvenida a la web
+image:/images/yehovaldespino.com_apis.png
+description:ejemplos de uso postman y cURL
 ---
 
 
@@ -30,5 +30,5 @@ Ambas herramientas son poderosas, pero Postman es amigable para aquellos que pre
 <br><br>
 **Reflexión: Conectando el Mundo Digital**
 
-Dominar el uso de APIs no se trata solo de aprender herramientas técnicas; es sobre comprender cómo las aplicaciones interactúan en el vasto paisaje digital. Cada solicitud y respuesta es una conversación entre aplicaciones, y estas conversaciones son las que dan vida a la innovación tecnológica. A medida que navegamos por el laberinto de datos e información en línea, recordemos que detrás de cada clic o toque hay un intercambio invisible pero esencial entre APIs. Este mundo de conexiones nos recuerda que la tecnología no solo se trata de códigos y bytes, sino de cómo estas herramientas impactan y mejoran nuestras vidas cotidianas. Así que, mientras dominamos las APIs, también estamos tejiendo hilos en el tejido de la era digital.
+Dominar el uso de APIs no se trata solo de aprender herramientas técnicas; es sobre comprender cómo las aplicaciones interactúan en el paisaje digital. Cada solicitud y respuesta es una conversación entre aplicaciones, y estas conversaciones son las que dan vida a la innovación tecnológica. A medida que navegamos por el laberinto de datos e información en línea, recordemos que detrás de cada clic o toque hay un intercambio invisible pero esencial entre APIs. Este mundo de conexiones nos recuerda que la tecnología no solo se trata de códigos y bytes, sino de cómo estas herramientas impactan y mejoran nuestras vidas cotidianas. Así que, mientras dominamos las APIs, también estamos tejiendo hilos en el tejido de la era digital.
 
