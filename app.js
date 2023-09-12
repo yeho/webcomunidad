@@ -4,6 +4,7 @@ import { join } from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import { swig } from 'consolidate'
+import { esbuildMiddleware } from './middewareEsbuild.js'
 
 // imports the routers
 import indexRouter from './routes/index.js'
@@ -11,6 +12,7 @@ import blogRouter from './routes/blog.js'
 import communityRouter from './routes/community.js'
 import ContactRouter from './routes/contact.js'
 import NewletterRouter from './routes/newsletter.js'
+
 const app = express()
 
 // view engine setup
@@ -21,6 +23,8 @@ app.use(logger('dev'))
 app.use(json())
 app.use(urlencoded({ extended: false }))
 app.use(cookieParser())
+
+app.use(esbuildMiddleware)
 app.use(express.static(join(process.cwd(), 'public')))
 
 // routes
