@@ -2,11 +2,7 @@ const $ = (element) => document.getElementById(element)
 
 document.addEventListener('DOMContentLoaded', () => {
   let menuIsactive = false
-  menu = $('btn-ham')
-
-  document.getElementsByTagName('body')[0].addEventListener('resize', () => {
-    console.log('screen is', screen.width)
-  })
+  const menu = $('btn-ham')
 
   menu.addEventListener('click', (e) => {
     if (menuIsactive) {
