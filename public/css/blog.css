@@ -4,65 +4,6 @@
   color: white;
 }
 
-.article-container {
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  grid-template-rows: auto;
-  justify-items: center;
-  gap: 25px;
-  max-width: 1000vw;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
-
-.post {
-  margin-top: 20px;
-  max-width: 460px;
-  align-items: center;
-  display: flex;
-  gap: 4px;
-}
-
-
-
-.post img {
-  width: 50%;
-  height: 100%;
-  border-radius: 8px;
-  border: 5px solid #3d393b;
-}
-
-a {
-  text-decoration: none;
-}
-
-.pst_body  h2 {
-  margin: 5px;
-  width: 95%;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.pst_body a > h2:hover {
-  color: rgb(92, 92, 92);
-}
-
-.pst_body > p {
-  font-size: 17px;
-  color: white;
-  margin: 5px;
-
-  overflow: hidden;
-  width: 95%;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-
 .no-content {
   text-align: center;
   display: grid;
@@ -71,13 +12,98 @@ a {
   font-size: 24px;
 }
 
+.article-container {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill,362px);
+  justify-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 1280px;
+  padding: 0 2rem;
+  padding-bottom: 5rem;
+  place-content: center;
 
 
+}
 
-@media (max-width:750px){
-  .post h2{
-    font-size: 16px;
+
+.post{
+overflow: hidden;
+display: flex;
+flex-direction: column;
+width: 100%;
+border:1px solid #666666;
+border-radius: 1rem;
+height: 100%;
+
+  & h2{ 
+    margin: 0;
+      font-size: 1.4rem;
+      font-weight: 800;
+
   
+    & a{
+      text-decoration: none;
+      color: rgb(208, 207, 207);
+      opacity: 0.8;
+      transition: all 250ms linear;
+
+
+    }
+
+    & :hover{
+      color: white;
+      opacity: 1;
+      cursor: pointer;
+    }
   }
-  
+
+  & img{
+
+    object-fit: cover;
+    height: 15rem;
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.2s;
+    opacity: 0.8;
+    filter: grayscale(0.2);
+    &:hover{
+      transform: scale(1);
+      opacity: 1;
+      filter: grayscale(0) saturate(1.1) contrast(1.1);
+
+    }
+
   }
+
+ .post_body{
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem 1.5rem;;
+  gap: 0.8rem;
+
+
+   &  p{
+    font-size: 0.9rem;
+    color: rgb(195, 195, 195);
+ 
+
+   }
+
+
+ }
+
+
+
+
+}
+
+
+
+
+
+

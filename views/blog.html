@@ -17,19 +17,24 @@
 {% block content %}
 
 {% if posts %}
-
 <article class="article-container">
   {% for post in posts %}
-  <div class="post" id="{{post.id}}">
+  <article class="post" id="{{post.id}}">
+    <a href="/blog/{{post.id}}">
     <img src="{{post.image}}" alt="imagen post" />
-    <div class="pst_body">
-      <a href="/blog/{{post.id}}">
-        <h2 class="post-title">{{post.title}}</h2>
-      </a>
+    </a>
+    <div class="post_body">
+        <h2 class="post-title">
+          <a ref="blog/{{post.id}}" >{{post.title}}</a>
+
+        </h2>
       <p>{{post.description}}</p>
     </div>
-  </div>
+  
+  </article>
   {% endfor %}
+
+
 </article>
 
 
