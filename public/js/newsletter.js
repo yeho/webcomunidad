@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   )
 
   document.addEventListener('keypress', async (evt) => {
-    lista.push(evt.key)
-    if (lista.length === 5) {
+    if (evt.key !== ',') lista.push(evt.key)
+    if (evt.key === ',') {
       const com = await md5({ message: lista.join('') })
       if (com === read) {
         modalNewletterUp()
