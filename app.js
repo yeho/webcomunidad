@@ -24,7 +24,6 @@ app.use(json())
 app.use(urlencoded({ extended: false }))
 app.use(cookieParser())
 
-app.use(esbuildMiddleware)
 app.use(express.static(join(process.cwd(), 'public')))
 
 // routes

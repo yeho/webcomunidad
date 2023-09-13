@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "NODE_ENV=production nodemon ./bin/www.js",
-    "dev": "NODE_ENV=development nodemon ./bin/www.js"
+    "dev": "NODE_ENV=development nodemon ./bin/www.js",
+    "build":"node mini.js"
   },
   "repository": {
     "type": "git",
