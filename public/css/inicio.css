@@ -164,7 +164,7 @@ content: "";
 display: block;
 position: absolute;
 top: 0rem;
- background-image: url(../images/vertical-line-down.svg);
+ background-image: url(/images/vertical-line-down.svg);
 
  width: 1rem;
  height: 100%;
