@@ -1,13 +1,13 @@
 ---
 id:uso_de_apis_con_postman_y_curl
 title: "Navegando el Mundo de las APIs: Dominando Postman y cURL"
-image:/images/yehovaldespino.com_apis.png
+image:/images/yehovaldespino.com_apis.webp
 description:ejemplos de uso postman y cURL
 ---
 
 
 # Navegando el Mundo de las APIs: Dominando Postman y cURL
-![uso de apis](/images/yehovaldespino.com_apis.png)
+![uso de apis](/images/yehovaldespino.com_apis.webp)
 
 
 En el emocionante universo de la programación y desarrollo de aplicaciones, las APIs (Interfaces de Programación de Aplicaciones) desempeñan un papel vital. Son como las puertas secretas que permiten a diferentes aplicaciones comunicarse y compartir datos de manera eficiente. En esta entrada, exploraremos cómo dominar el uso de APIs utilizando dos herramientas populares: Postman y cURL.
