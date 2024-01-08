@@ -49,6 +49,7 @@ router.get("/:idPost", function (req, res, next) {
         title: info.title,
         description: info.description,
         id: info.id,
+        image: info.image,
       });
     } catch (err) {
       console.log(err);
