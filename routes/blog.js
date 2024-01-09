@@ -62,7 +62,7 @@ router.post('/admin', upload.fields([{ name: 'posts', maxCount: 1 }, { name: 'im
   const images = req.files.images
   const password = req.body.pass
   if (password !== process.env.password) {
-    rm(posts.posts.path)
+    rm(posts.path)
 
     if (images) {
       for await (const image of images) {
