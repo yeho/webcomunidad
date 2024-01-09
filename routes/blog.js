@@ -30,10 +30,10 @@ router.get('/', async function (req, res, next) {
         }
       }
 
-      const filesout = await readdir(join('..', 'posts'))
+      const filesout = await readdir(join(process.cwd(), '..', 'posts'))
 
       for await (const file of filesout) {
-        const text = await readFile(join('..', 'posts', file), 'utf-8')
+        const text = await readFile(join(process.cwd(), '..', 'posts', file), 'utf-8')
         const header = Extra(text)
         data.push(header)
       }
@@ -50,8 +50,8 @@ router.get('/', async function (req, res, next) {
 })
 
 router.get('/admin', async function (req, res, next) {
-  const dir1 = await readdir(join('..', 'posts'))
-  const dir2 = await readdir(join('..', 'postsImage'))
+  const dir1 = await readdir(join(process.cwd(), '..', 'posts'))
+  const dir2 = await readdir(join(process.cwd(), '..', 'postsImage'))
   const data = dir1.concat(dir2)
 
   res.render('postup', { posts: data })
@@ -73,10 +73,10 @@ router.post('/admin', upload.fields([{ name: 'posts', maxCount: 1 }, { name: 'im
     return res.status(401).send()
   }
 
-  await rename(posts.path, join('..', 'posts', `${posts.originalname}`))
+  await rename(posts.path, join(process.cwd(), '..', 'posts', `${posts.originalname}`))
   if (images) {
     for await (const image of images) {
-      await rename(image.path, join('..', 'postsImage', `${image.originalname}`))
+      await rename(image.path, join(process.cwd(), '..', 'postsImage', `${image.originalname}`))
     }
   }
 
@@ -93,9 +93,9 @@ router.delete('/admin', upload.none(), async function (req, res, next) {
 
   try {
     if (!seleced.includes('.webp')) {
-      await rm(join('..', 'posts', seleced))
+      await rm(join(process.cwd(), '..', 'posts', seleced))
     } else {
-      await rm(join('..', 'postsImage', seleced))
+      await rm(join(process.cwd(), '..', 'postsImage', seleced))
     }
   } catch (e) {
     console.log(e)
@@ -110,7 +110,7 @@ router.get('/:idPost', async function (req, res, next) {
     data = await readFile(join('posts', `${req.params.idPost}.md`))
   } catch (err) {
     try {
-      data = await readFile(join('..', 'posts', `${req.params.idPost}.md`))
+      data = await readFile(join(process.cwd(), '..', 'posts', `${req.params.idPost}.md`))
     } catch (err) {
       console.log(err)
       next(404)
