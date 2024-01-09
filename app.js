@@ -4,7 +4,6 @@ import { join } from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import { swig } from 'consolidate'
-import { esbuildMiddleware } from './middewareEsbuild.js'
 
 // imports the routers
 import indexRouter from './routes/index.js'
@@ -25,6 +24,7 @@ app.use(urlencoded({ extended: false }))
 app.use(cookieParser())
 
 app.use(express.static(join(process.cwd(), 'public')))
+app.use(express.static(join('../', 'postsImage')))
 
 // routes
 app.use('/', indexRouter)

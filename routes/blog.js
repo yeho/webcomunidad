@@ -1,9 +1,12 @@
 import { Router } from 'express'
-import { readdir, readFile } from 'fs/promises'
+import { readdir, readFile, rm, rename } from 'fs/promises'
 import { join } from 'path'
 import MarkdownIt from 'markdown-it'
+import multer from 'multer'
+
 const md = new MarkdownIt({ html: true })
 
+const upload = multer({ dest: '../tmp' })
 const router = Router()
 
 router.get('/', async function (req, res, next) {
@@ -27,6 +30,14 @@ router.get('/', async function (req, res, next) {
         }
       }
 
+      const filesout = await readdir(join('..', 'posts'))
+
+      for await (const file of filesout) {
+        const text = await readFile(join('..', 'posts', file), 'utf-8')
+        const header = Extra(text)
+        data.push(header)
+      }
+
       if (data.length === 0) {
         return res.render('blog', { posts: false })
       }
@@ -38,32 +49,93 @@ router.get('/', async function (req, res, next) {
     })
 })
 
-router.get('/:idPost', function (req, res, next) {
-  readFile(join('posts', `${req.params.idPost}.md`))
-    .then((data) => {
-      try {
-        const info = Extra(data.toString())
-        console.log(info.id)
-        const dataHTML = md.render(
-          data.toString().replace(/-{3}([\w\s:"',{}/.-?¿])*-{3}/gm, '')
-        )
-        res.render('post', {
-          text: dataHTML,
-          title: info.title,
-          description: info.description,
-          id: info.id,
-          image: info.image
-        })
-      } catch (err) {
-        console.log(err)
-        res.status(500).send()
+router.get('/admin', async function (req, res, next) {
+  const dir1 = await readdir(join('..', 'posts'))
+  const dir2 = await readdir(join('..', 'postsImage'))
+  const data = dir1.concat(dir2)
+
+  res.render('postup', { posts: data })
+})
+
+router.post('/admin', upload.fields([{ name: 'posts', maxCount: 1 }, { name: 'images' }]), async function (req, res, next) {
+  const posts = req.files.posts[0]
+  const images = req.files.images
+  const password = req.body.pass
+  if (password !== process.env.password) {
+    rm(posts.posts.path)
+
+    if (images) {
+      for await (const image of images) {
+        rm(image.path)
       }
-    })
-    .catch((err) => {
+    }
+
+    return res.status(401).send()
+  }
+
+  await rename(posts.path, join('..', 'posts', `${posts.originalname}`))
+  if (images) {
+    for await (const image of images) {
+      await rename(image.path, join('..', 'postsImage', `${image.originalname}`))
+    }
+  }
+
+  return res.send('ok')
+})
+
+router.delete('/admin', upload.none(), async function (req, res, next) {
+  const password = req.body.passw
+  const seleced = req.body.posts
+
+  if (password !== process.env.password) {
+    return res.status(401).send()
+  }
+
+  try {
+    if (!seleced.includes('.webp')) {
+      await rm(join('..', 'posts', seleced))
+    } else {
+      await rm(join('..', 'postsImage', seleced))
+    }
+  } catch (e) {
+    console.log(e)
+    return res.status(400).send()
+  }
+  return res.send('ok')
+})
+
+router.get('/:idPost', async function (req, res, next) {
+  let data = ''
+  try {
+    data = await readFile(join('posts', `${req.params.idPost}.md`))
+  } catch (err) {
+    try {
+      data = await readFile(join('..', 'posts', `${req.params.idPost}.md`))
+    } catch (err) {
       console.log(err)
       next(404)
+    }
+  }
+
+  try {
+    const info = Extra(data.toString())
+    console.log(info.id)
+    const dataHTML = md.render(
+      data.toString().replace(/-{3}([\w\s:"',{}/.-?¿])*-{3}/gm, '')
+    )
+    res.render('post', {
+      text: dataHTML,
+      title: info.title,
+      description: info.description,
+      id: info.id,
+      image: info.image
     })
-})
+  } catch (err) {
+    console.log(err)
+    res.status(500).send()
+  }
+}
+)
 
 router.get('/docs/:id', function (req, res, next) {
   readFile(join('posts', 'docs', `${req.params.id}.md`))
