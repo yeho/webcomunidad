@@ -1,136 +1,138 @@
-{% extends 'layout.html' %} 
-{% block header %}
-  <title>itcscience</title>
-  <meta name="description" content="Encuentra la mejor comunidad de CS y tecnologia" />
-  <meta name="keywords" content="developers, comunidad, it, desarollo, programacion" />
-  <meta property="og:title" content="Landing Page" />
+{% extends 'layout.html' %} {% block header %}
+<title>itcscience</title>
+<meta name="description" content="Encuentra la mejor comunidad de CS y tecnologia" />
+<meta name="keywords" content="developers, comunidad, it, desarollo, programacion" />
+<meta property="og:title" content="Landing Page" />
 
 
-  <meta property="og:description" content="Encuentra la mejor comunidad de CS y tecnologia" /> 
-<link rel="stylesheet" href="/css/inicio.css" />
-
-{% endblock %} 
-{% block content %}
+<meta property="og:description" content="Encuentra la mejor comunidad de CS y tecnologia" />
+<link rel="stylesheet" href="css/inicio.css" /> {% endblock %} {% block content %}
 
 <div class="index">
 
-
-  <div class="main_index">
-
-    <div class="wrapper-img">
-      <img  class="img-1" src="/images/logo1-icon.svg" alt="">
+    <div class="social-button">
+        <a href="https://twitter.com/itcscience_org/" target="_blank">
+            <img src="images/twiter.png" alt="Twitter">
+        </a>
     </div>
 
-    <blockquote class="quote">
-     <q>El mayor enemigo del conocimiento no es la ignoracia, sino la ilusión del conocimiento</q>
-    <footer>- Stephen Hawking</footer>
-    </blockquote>
-    
-    
-    <a  href="#info" ><button class="btn-more">Saber mas 
+
+    <div class="main_index">
+
+        <div class="wrapper-img">
+            <img class="img-1" src="/images/logo1-icon.svg" alt="">
+        </div>
+
+        <blockquote class="quote">
+            <q>El mayor enemigo del conocimiento no es la ignoracia, sino la ilusión del conocimiento</q>
+            <footer>- Stephen Hawking</footer>
+        </blockquote>
+
+
+        <a href="#info"><button class="btn-more">Saber mas 
 
 <img class="btn-img" src="/images/down-arrow.svg" alt="">
 
     </button>
     </a>
-    
+
     </div>
-    
-    
+
+
     <div id="info" class="info">
-    
-    
-    <img  class="img-2" src="/images/circuito.svg" alt="">
-    
-    <div class="info_text">
 
-      <span>Acerca de</span>
-      <h3>Que es ITCScience?</h3>
-      <p>La Comunidad ITCScience es una comunidad de ciencia y tecnologia, creada con la finalidad de difundir las Ciencias Computacionales e Informatica en general.
-      </p>
-      </div>
-    
-    
-    
-    
-    
+
+        <img class="img-2" src="/images/circuito.svg" alt="">
+
+        <div class="info_text">
+
+            <span>Acerca de</span>
+            <h3>Que es ITCScience?</h3>
+            <p>La Comunidad ITCScience es una comunidad de ciencia y tecnologia, creada con la finalidad de difundir las Ciencias Computacionales e Informatica en general.
+            </p>
+        </div>
+
+
+
+
+
     </div>
-    
-    
+
+
     <div class="groups">
-    
-  <div class="groups_info">
- <span>Comunidad</span>
-    <h3>Nuestros <span>Grupos</span> </h3>
-  
-   <p>Tenemos diversos grupos con tematicas en especifico para colaborar,aportar,aplicar,aprender y debatir entre los miembros de la comunidad</p>
-  </div>
-  
 
+        <div class="groups_info">
+            <span>Comunidad</span>
+            <h3>Nuestros <span>Grupos</span> </h3>
 
-  <div class="groups_container">
-
-
- <div class="group_what">
-  <div class="circle"></div>
-   <img src="/images/cien.webp" loading="lazy"  alt="grupo ciencias Computacionales">
-   <div>
-    <h4>ciencias Computacionales</h4>
-    <p>Este grupo se centra en las Ciencias Computacionales,donde se Realizan diversas aclalaraciones y debates donde se comparte el conocimiento del area </p>
-  <a href="https://chat.whatsapp.com/FTSALNW5qCwK2Yjlszi1Pq">ingresar al grupo<img  class="img_wh" src="/images/enter-outline.svg" alt="icono de entrada"></a> 
-   </div>
- </div>
- 
- <div class="group_what">
-  <div class="circle"></div>
-  <img src="/images/pog.webp" loading="lazy"  alt="programdores">
-  <div>
-   <h4>Programadores</h4>
-   <p>Este grupo se basa en tema mas general en el area informatica,donde se ayudan a resolver problemas de codigo y se resulven dudas mas simples</p>
- <a href="https://chat.whatsapp.com/Gqcit7OCPiiIoZp93wjNjF">ingresar al grupo<img  class="img_wh" src="/images/enter-outline.svg" alt="icono de entrada"></a> 
-  </div>
-</div>
+            <p>Tenemos diversos grupos con tematicas en especifico para colaborar,aportar,aplicar,aprender y debatir entre los miembros de la comunidad</p>
+        </div>
 
 
 
-<div class="group_what">
-  <div class="circle"></div>
-  <img src="/images/recur.webp"  loading="lazy"  alt="Recursos Informatica">
-  <div>
-   <h4>Recursos Informatica</h4>
-   <p>Grupo destinado a compartir recursos de informatica,donde ademas se permite tambien recursos de matematicas y electronica </p>
- <a href="https://chat.whatsapp.com/ER1SMqM6GmZKGBIWD7JUEs">ingresar al grupo <img  class="img_wh" src="/images/enter-outline.svg" alt="logo whatsapp"></a> 
- </div>
-</div>
+        <div class="groups_container">
+
+
+            <div class="group_what">
+                <div class="circle"></div>
+                <img src="/images/cien.webp" loading="lazy" alt="grupo ciencias Computacionales">
+                <div>
+                    <h4>ciencias Computacionales</h4>
+                    <p>Este grupo se centra en las Ciencias Computacionales,donde se Realizan diversas aclalaraciones y debates donde se comparte el conocimiento del area </p>
+                    <a href="https://chat.whatsapp.com/FTSALNW5qCwK2Yjlszi1Pq">ingresar al grupo<img  class="img_wh" src="/images/enter-outline.svg" alt="icono de entrada"></a>
+                </div>
+            </div>
+
+            <div class="group_what">
+                <div class="circle"></div>
+                <img src="/images/pog.webp" loading="lazy" alt="programdores">
+                <div>
+                    <h4>Programadores</h4>
+                    <p>Este grupo se basa en tema mas general en el area informatica,donde se ayudan a resolver problemas de codigo y se resulven dudas mas simples</p>
+                    <a href="https://chat.whatsapp.com/Gqcit7OCPiiIoZp93wjNjF">ingresar al grupo<img  class="img_wh" src="/images/enter-outline.svg" alt="icono de entrada"></a>
+                </div>
+            </div>
 
 
 
+            <div class="group_what">
+                <div class="circle"></div>
+                <img src="/images/recur.webp" loading="lazy" alt="Recursos Informatica">
+                <div>
+                    <h4>Recursos Informatica</h4>
+                    <p>Grupo destinado a compartir recursos de informatica,donde ademas se permite tambien recursos de matematicas y electronica </p>
+                    <a href="https://chat.whatsapp.com/ER1SMqM6GmZKGBIWD7JUEs">ingresar al grupo <img  class="img_wh" src="/images/enter-outline.svg" alt="logo whatsapp"></a>
+                </div>
+            </div>
 
 
 
 
-<div class="group_what">
-  <div class="circle"></div>
-  <img src="/images/itcs.jpeg" loading="lazy" alt="comunidad">
-  <div>
-    <h4>ITCScience</h4>
-    <p>grupo de avisos y difucion de la comunidad</p>
- <a href="https://chat.whatsapp.com/EtQk9oMhecp1aFt3akPaOA">Ingresar al grupo  <img  class="img_wh" src="/images/enter-outline.svg" alt="icono de entrada"></a>
-  </div>
-</div>
+
+
+
+            <div class="group_what">
+                <div class="circle"></div>
+                <img src="/images/itcs.jpeg" loading="lazy" alt="comunidad">
+                <div>
+                    <h4>ITCScience</h4>
+                    <p>grupo de avisos y difucion de la comunidad</p>
+                    <a href="https://chat.whatsapp.com/EtQk9oMhecp1aFt3akPaOA">Ingresar al grupo  <img  class="img_wh" src="/images/enter-outline.svg" alt="icono de entrada"></a>
+                </div>
+            </div>
 
 
 
 
-  </div>
+        </div>
 
 
-     
 
-    
-    
+
+
+
     </div>
-    
+
 
 
 
