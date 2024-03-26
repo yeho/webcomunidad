@@ -11,6 +11,7 @@ import blogRouter from './routes/blog.js'
 import communityRouter from './routes/community.js'
 import ContactRouter from './routes/contact.js'
 import NewletterRouter from './routes/newsletter.js'
+
 const app = express()
 
 // view engine setup
@@ -21,7 +22,9 @@ app.use(logger('dev'))
 app.use(json())
 app.use(urlencoded({ extended: false }))
 app.use(cookieParser())
+
 app.use(express.static(join(process.cwd(), 'public')))
+app.use(express.static(join('../', 'postsImage')))
 
 // routes
 app.use('/', indexRouter)

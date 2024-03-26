@@ -2,11 +2,12 @@
 <html lang="es">
 
 <head>
+   <meta charset="UTF-8" />
    <link rel="shortcut icon" href="/images/logo1-icon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/normalizer.css" />
-  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/min/css/normalizer.css" />
+  <link rel="stylesheet" href="/min/css/layout.css" />
   <meta name="view-transition" content="same-origin">
 
   {% block header %} {% endblock %}
@@ -15,7 +16,7 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <a class="logo" href="/"><img src="/images/logo.webp" alt="" /></a>
+      <a class="logo" href="/" title="inicio"><img src="/images/logo.webp" alt="logo itcscience"  title="inicio" /></a>
       <ul class="nav-menu-complete">
         <li class="nav_element"><a href="/">INICIO</a></li>
         <li class="nav_element"><a href="/blog">BLOG</a></li>
@@ -38,7 +39,7 @@
     <p>ITCScience 2023 &copy;</p>
   </footer>
 
-  <script src="/js/layout.js"></script>
+  <script src="/min/js/layout.js"></script>
 </body>
 
 </html>

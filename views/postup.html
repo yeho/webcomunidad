@@ -1,0 +1,85 @@
+{% extends 'layout.html' %} 
+{%block header %}
+<title>itcscience | post blog up </title>
+<meta name="description" content="realizar subida de posts del blog" />
+<meta property="og:type" content="website" />
+
+
+<link rel="stylesheet" href="/min/css/postup.css">
+<script type="module" src="/min/js/postup.js"></script>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="form-content">
+
+
+
+
+
+<form class="form" id="form">
+    <h2>subida de post</h2>
+<label class="form-label">
+Contraseña
+<input type="password" name="pass" " required>
+</label>
+<label>
+    Post (solo .md)
+    <input type="file" name="posts" id="posts" accept=".md" required>
+</label>
+
+<label>
+    Imágenes (solo .webp)
+    <input type="file" name="images" id="images" accept=".webp" multiple>
+</label>
+
+
+
+<button class="form-button">subir</button>
+
+
+</form>
+
+
+
+<form class="form" id="form2">
+    <h2>Eliminar contenido o post</h2>
+<label class="form-label">
+Contraseña
+<input type="password" name="passw" required>
+</label>
+
+</br>
+
+<label>contenido a Eliminar
+    <select id="selected">
+        <!-- render a posts -->
+        {% for post in posts %}
+        <option value="{{post}}">{{post}}</option>
+        {% endfor %}
+        </select>
+
+
+</label>
+
+
+
+
+<button class="form-button">Eliminar</button>
+
+
+</form>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

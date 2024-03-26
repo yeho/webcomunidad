@@ -2,27 +2,56 @@
 {%block header %}
 <title>itcscience | {{title}}</title>
 <meta name="description" content="{{description}}" />
-<meta name="keywords" content="developers, comunidad, it, desarollo, programacion" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content="{{title}}" />
-
-
 <meta property="og:description" content="{{description}}" /> 
+<meta
+property="og:image"
+itemprop="image"
+content="https://itcscience.org/{{image}}"
+/>
+<meta property="og:updated_time" content="1440432930" />
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="itcscience.org" />
+<meta property="twitter:url" content="https://itcscience.org" />
+<meta name="twitter:title" content="{{title}}" />
+<meta
+  name="twitter:description"
+  content="{{description}}"
+/>
+<meta
+  name="twitter:image"
+  content="https://itcscience.org/{{image}}"
+/>
+
+
+
+
+
+
+
+
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css">
-<link rel="stylesheet" href="/css/article.css">
+<link rel="stylesheet" href="/min/css/article.css">
 
 {% endblock %}
 
 
 
 {% block content %}
-<div class="article" style="view-transition-name:full-embed">
+<article class="article" style="view-transition-name:full-embed">
 
 {%autoescape%} {{ text }} {%endautoescape%}
 
-</div>
+</article>
 
 <script type="module">
     // console.log("xd")

@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "NODE_ENV=production nodemon ./bin/www.js",
-    "dev": "NODE_ENV=development nodemon ./bin/www.js"
+    "dev": "NODE_ENV=development nodemon ./bin/www.js",
+    "build":"node mini.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "consolidate": "0.16.0",
+    "esbuild": "^0.19.2",
     "highlight.js": "11.6.0",
     "mariadb": "3.0.1",
     "markdown-it": "13.0.1",

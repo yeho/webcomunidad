@@ -1,0 +1,58 @@
+.form{
+margin: auto;
+width: 450px;
+height: 400px;
+padding: 20px;
+background-color: rgb(42, 41, 41);
+display: flex;
+flex-direction: column;
+gap: 12px;
+align-items: center;
+color: black;
+border-radius: 4px;
+margin-top: 40px;
+}
+
+
+.form-label{
+    color: white;
+}
+
+.form-label input{
+    margin-left: 10px;
+color: black
+}
+
+
+
+.form-button{
+border-radius: 4px;
+padding: 12px;
+background-color:rgb(90, 89, 89);
+border: none;
+transition: color 0.2s, background-color 0.1s;
+cursor: pointer;
+
+
+}
+
+.form-button:hover{
+background-color: rgb(60, 60, 60);
+color: white;
+}
+
+.form-button:active{
+background-color: rgb(30, 30, 30);
+color: white;
+}
+
+
+.form-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+select{
+    color: black;
+}
