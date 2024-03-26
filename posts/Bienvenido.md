@@ -28,6 +28,6 @@ Al tener una mayor cantidad de miembros y haber atraído a varios miembros muy b
 Hoy en día, ITCScience se presenta como una comunidad con el objetivo de colaborar al desarrollo de una cultura científica mediante la difusión de las ciencias computacionales y la tecnología
 
 Si desean contactarnos pueden hacerlo desde la pestaña de Contacto o bien pueden entrar a nuestra comunidad de Whatsapp:
-chat.whatsapp.com/EtQk9oMhecp1aF
+[Grupo de la comunidad](http://chat.whatsapp.com/EtQk9oMhecp1aF)
 O directamente mediante nuestro correo de contacto
-info@itcscience.org
+ [info@itcscience.org](mailto:info@itcscience.org)
