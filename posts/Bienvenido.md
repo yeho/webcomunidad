@@ -9,71 +9,25 @@ description:bienvenida a la web
 # Bienvenido a la web de ITCScience
 ![logo itscience](/images/logo1b.svg)
 
+###¿Qué es ITCScience?
 
-Este website ha sido creado para la difusión de contenido sobre la ciencias de la computación y la informática en general.
-la web esta dividida en diferentes secciones para distribuir mejor el contenido
-tenemos:
-- Inicio
-- Blog
-- Newsletters
-- Comunidad
-- Contacto
+ITCScience es una comunidad con el objetivo de colaborar al desarrollo de una cultura científica mediante la difusión de las ciencias computacionales y la tecnología.
 
-Aparte la comunidad esta dividida en diferentes grupos donde algunos tienen un mismo uso y otros  un uso especifico.
+La comunidad ITCScience mantiene diferentes proyectos con el fin de crecer como comunidad y a la vez colaborar al desarrollo de una cultura científica. Lo más importante para nosotros es el desarrollo personal de nuestros miembros, pues creemos que esto es lo principal para aspirar a crear cambios culturales.
 
-### los grupos de la comunidad:
-- Ciencia de la computación:
-Este grupo se centra en las Ciencias Computacionales,donde se Realizan diversas aclaraciones y debates donde se comparte el conocimiento del area
-[link grupo](https://chat.whatsapp.com/FTSALNW5qCwK2Yjlszi1Pq)
+Entre nuestros muchos proyectos está este drive el cual se ha construido a partir de los aportes de todos nuestros miembros en uno de nuestros grupos de Whatsapp. Nuestro objetivo es poner el conocimiento al alcance de todos, siéntase libre de compartir el drive con todo el mundo.
 
+### Historia de la ITCScience
 
--  Programadores:
-Este grupo se basa en tema mas general en el area informática,donde se ayudan a resolver problemas de código y se resuelve dudas mas simples
-[link grupo](https://chat.whatsapp.com/Gqcit7OCPiiIoZp93wjNjF)
+Historia de ITCScience
 
-- Recursos Informática:
-Grupo destinado a compartir recursos de informática,donde ademas se permite también recursos de matemáticas y electrónica
-[link grupo](https://chat.whatsapp.com/ER1SMqM6GmZKGBIWD7JUEs)
+La Comunidad ITCScience fue creada el 10 de Marzo de 2021 por un pequeño pato llamado Duck. Partiendo como solo un grupo en donde ayudamos a los universitarios a realizar las tareas de informática, poco a poco comenzamos a crecer al llamar la atención por el enfoque científico que le dábamos al grupo.
 
+Al tener una mayor cantidad de miembros y haber atraído a varios miembros muy bien preparados, el 23 de Febrero de 2022 fueron convocados por Duck los miembros más comprometidos con el grupo, y fue en esta unión que decidimos dar el siguiente paso transformándonos en una organización con fines sociales y culturales, es así como nace ITCScience. (IT se refiere a Information Technology y CS a Computer Science)
 
--  IT & SYSADMIN:
-Este grupo se centra en la administración de sistemas,electrónica e IT en general.
-[link grupo](https://chat.whatsapp.com/Cn2s8jDntv9InrNlB8Ni93)
+Hoy en día, ITCScience se presenta como una comunidad con el objetivo de colaborar al desarrollo de una cultura científica mediante la difusión de las ciencias computacionales y la tecnología
 
-- Programadores  101:
-Grupo mas general en el area de la programación e informática
-[link grupo](https://chat.whatsapp.com/IFFG3uUQNO2DfrKzUiOCBo)
-
--  Free ducks:
-Grupo  Offtopic de la comunidad
-[link grupo](https://chat.whatsapp.com/IOUU2XlU8g5JV52Vm8XajH)
-
--  Ayuda Tarea Informática:
-grupo de ayuda para realizar tareas en la áreas de la informática
-[link grupo](https://chat.whatsapp.com/IXhkrgRx4Ej0MlCLpYOGxg)
-
-## Reglas de  la comunidad 
-**Reglas generales**
-- Como regla general queda prohibido no participar en actividades y encuestas oficiales.
-
-- Queda prohibida toda actitud anticientifica
-- Es obligación pertenecer al grupo de difusión de la Comunidad.
-- No audios❌ 
-- No spam❌
-- No agresividad❌
-- Solo informática
-
-**En el grupo freeduck**
-- Se permite hablar temas ajenos a la informática
-- No ser gei ❌
-- No temas ilegales ❌
-- No contenido NSFW ❌
-- No compartir el enlace ❌
-- No mensajes sin sentido ni cadenas ❌
-- No mandar nudes❌
-- Solo se habla lo que en otros grupos no se pueda hablar, las demás cosas en sus respectivos grupos.
-
-**En el grupo de Recursos Informática**
-- Prohibido Hablar. ❌
-(solo hablar para pedir/mandar recursos y comentar sobre ellos)
-- No recursos de actividades ilegales. ❌
+Si desean contactarnos pueden hacerlo desde la pestaña de Contacto o bien pueden entrar a nuestra comunidad de Whatsapp:
+chat.whatsapp.com/EtQk9oMhecp1aF
+O directamente mediante nuestro correo de contacto
+info@itcscience.org
