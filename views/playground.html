@@ -1,0 +1,217 @@
+{% extends 'layout.html' %} 
+
+{% block header %}
+<link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs/editor/editor.main.min.css">
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#visualizer{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+}
+
+.tabs-list{
+    display: flex;
+    justify-content:start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabs-list li{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3b3a3a;
+}
+
+.tabs-list li:hover{
+    background-color: #4b4a4a;
+}
+
+.tabs-list li.active{
+    background-color: #4b4a4a;
+}
+
+</style>
+
+
+<main class="container">
+
+<section>
+
+<ul class="tabs-list">
+    <li class="active" data-set="html">HTML</li>
+    <li data-set="css">CSS</li>
+    <li data-set="js">JS</li>
+</ul>
+
+<pre style="height: 500px;" id="editor-html">
+
+</pre>
+
+
+<pre style="height: 500px;" id="editor-css">
+
+</pre>
+
+<pre style="height: 500px;" id="editor-js">
+</pre>
+
+</section>
+
+<div>
+    <iframe   id="visualizer"></iframe>
+
+</div>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs/loader.min.js"></script>
+<script>
+
+const frame = document.getElementById('visualizer')
+const editorHtml = document.getElementById('editor-html')
+const editorCss = document.getElementById('editor-css')
+const editorJs = document.getElementById('editor-js')
+let htmlText = ''
+let cssText = ''
+let jsText = ''
+let tab = 'html'
+
+
+
+// require is provided by loader.min.js.
+require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs' }});
+require(["vs/editor/editor.main"], () => {
+
+  function makeEditor(text, language,ele){
+    return monaco.editor.create(ele, {
+        value: text,
+        language: language,
+        theme: 'vs-dark',
+      });
+  }
+
+  function onWrite(editor,type){
+    editor.onDidChangeModelContent(() => {
+        const value = editor.getValue()
+        
+        if(type === 'html'){
+            htmlText = value
+        }
+        if(type === 'css'){
+            cssText = value
+        }
+
+        if(type === 'js'){
+            jsText = value
+        }
+
+
+
+
+        const html = `<html>
+        <head>
+        <style>
+        ${cssText}
+        </style>
+        </head>
+        <body>
+        ${htmlText}
+        </body>
+        <script>
+        ${jsText}
+        <`+`/script>
+        </html>`
+
+        frame.srcdoc = html
+
+
+
+
+    })
+
+  }
+
+  
+
+    document.querySelectorAll('li').forEach(li => {
+        li.addEventListener('click', () => {
+            tab = li.dataset.set
+
+            document.querySelectorAll('li').forEach(li => {
+                li.classList.remove('active')
+            })
+
+            li.classList.add('active')
+
+            
+            if(tab === 'html'){
+                editorHtml.style.display = 'block'
+                editorCss.style.display = 'none'
+                editorJs.style.display = 'none'
+
+                
+                
+            }
+            if(tab === 'css'){
+                editorHtml.style.display = 'none'
+                editorCss.style.display = 'block'
+                editorJs.style.display = 'none'
+               
+                1
+
+               
+            }
+            if(tab === 'js'){
+                editorHtml.style.display = 'none'
+                editorCss.style.display = 'none'
+                editorJs.style.display = 'block'
+
+               
+
+            }
+             
+        })
+    })
+
+
+    const  firstEditor =  makeEditor(htmlText, 'html',document.getElementById('editor-html'))
+    onWrite(firstEditor,"html")
+    const  secondEditor =  makeEditor(cssText, 'css',document.getElementById('editor-css'))
+    onWrite(secondEditor,"css")
+    const  thirdEditor =  makeEditor(jsText, 'javascript',document.getElementById('editor-js'))
+    onWrite(thirdEditor,"js")
+
+    document.getElementById('editor-css').style.display = 'none'
+    document.getElementById('editor-js').style.display = 'none'
+
+})
+
+</script>
+
+
+{% endblock %}

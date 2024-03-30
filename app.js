@@ -11,6 +11,7 @@ import blogRouter from './routes/blog.js'
 import communityRouter from './routes/community.js'
 import ContactRouter from './routes/contact.js'
 import NewletterRouter from './routes/newsletter.js'
+import PlaygroundRouter from './routes/playground.js'
 
 const app = express()
 
@@ -32,6 +33,7 @@ app.use('/blog', blogRouter)
 app.use('/community', communityRouter)
 app.use('/contacto', ContactRouter)
 app.use('/newsletter', NewletterRouter)
+app.use('/playground', PlaygroundRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
