@@ -44,6 +44,42 @@
     background-color: #4b4a4a;
 }
 
+
+#console{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 245px;
+    background-color: #3b3a3a;
+    color: white;
+    overflow-y: scroll;
+
+}
+
+#console li{
+    padding: 10px;
+    border-bottom: 1px solid #4b4a4a;
+}
+
+#console li.error{
+    background-color: rgba(174, 48, 48, 0.772);
+}
+
+
+#console::-webkit-scrollbar {
+  width: 12px;              
+}
+
+
+#console::-webkit-scrollbar-track {
+  background: rgb(48, 48, 48);        /* color of the tracking area */
+}
+
+
+#console::-webkit-scrollbar-thumb {
+  background-color: rgb(113, 113, 113);    /* color of the scroll thumb */
+}
+
 </style>
 
 
@@ -76,6 +112,12 @@
 
 </div>
 
+<section>
+    <ul id="console">
+    </ul>
+</section>
+
+
 </main>
 
 
@@ -87,131 +129,7 @@
 
 
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs/loader.min.js"></script>
-<script>
-
-const frame = document.getElementById('visualizer')
-const editorHtml = document.getElementById('editor-html')
-const editorCss = document.getElementById('editor-css')
-const editorJs = document.getElementById('editor-js')
-let htmlText = ''
-let cssText = ''
-let jsText = ''
-let tab = 'html'
-
-
-
-// require is provided by loader.min.js.
-require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs' }});
-require(["vs/editor/editor.main"], () => {
-
-  function makeEditor(text, language,ele){
-    return monaco.editor.create(ele, {
-        value: text,
-        language: language,
-        theme: 'vs-dark',
-      });
-  }
-
-  function onWrite(editor,type){
-    editor.onDidChangeModelContent(() => {
-        const value = editor.getValue()
-        
-        if(type === 'html'){
-            htmlText = value
-        }
-        if(type === 'css'){
-            cssText = value
-        }
-
-        if(type === 'js'){
-            jsText = value
-        }
-
-
-
-
-        const html = `<html>
-        <head>
-        <style>
-        ${cssText}
-        </style>
-        </head>
-        <body>
-        ${htmlText}
-        </body>
-        <script>
-        ${jsText}
-        <`+`/script>
-        </html>`
-
-        frame.srcdoc = html
-
-
-
-
-    })
-
-  }
-
-  
-
-    document.querySelectorAll('li').forEach(li => {
-        li.addEventListener('click', () => {
-            tab = li.dataset.set
-
-            document.querySelectorAll('li').forEach(li => {
-                li.classList.remove('active')
-            })
-
-            li.classList.add('active')
-
-            
-            if(tab === 'html'){
-                editorHtml.style.display = 'block'
-                editorCss.style.display = 'none'
-                editorJs.style.display = 'none'
-
-                
-                
-            }
-            if(tab === 'css'){
-                editorHtml.style.display = 'none'
-                editorCss.style.display = 'block'
-                editorJs.style.display = 'none'
-               
-                1
-
-               
-            }
-            if(tab === 'js'){
-                editorHtml.style.display = 'none'
-                editorCss.style.display = 'none'
-                editorJs.style.display = 'block'
-
-               
-
-            }
-             
-        })
-    })
-
-
-    const  firstEditor =  makeEditor(htmlText, 'html',document.getElementById('editor-html'))
-    onWrite(firstEditor,"html")
-    const  secondEditor =  makeEditor(cssText, 'css',document.getElementById('editor-css'))
-    onWrite(secondEditor,"css")
-    const  thirdEditor =  makeEditor(jsText, 'javascript',document.getElementById('editor-js'))
-    onWrite(thirdEditor,"js")
-
-    document.getElementById('editor-css').style.display = 'none'
-    document.getElementById('editor-js').style.display = 'none'
-
-})
-
-</script>
-
+<script src="/js/playground.js"></script>
 
 {% endblock %}
