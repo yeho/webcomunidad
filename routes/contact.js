@@ -7,6 +7,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  if (!req.body.name || !req.body.email || !req.body.phone || !req.body.message) {
+    return res.status(400).end()
+  }
+
   mail.sendMail({ from: 'info@itcscience.org', to: 'info@itcscience.org', html: mailGenerateHtml(req.body), subject: 'contacto' }, (err) => {
     if (err) {
       console.log('error: ' + err)
