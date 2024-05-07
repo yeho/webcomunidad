@@ -1,5 +1,5 @@
 ---
-id:CTF-course
+id:CTFcourse
 title: que es un CTF y como empezar,curso gratis
 image:/images/ctf.webp
 description: Aprende que es un CTF y como empezar en el mundo de los CTFs, con un curso en vivo y gratis
